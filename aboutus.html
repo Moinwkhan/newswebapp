@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Web App - About Us</title>
+    <link rel="stylesheet" href="home.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .line {
+            margin-top: 0rem;
+            background-color: red;
+            height: 2px;
+            animation: uline 1.5s ease-in-out .1s 1;
+            position: fixed;
+        }
+
+        @keyframes uline {
+            0% {
+                width: 0%
+            }
+
+            50% {
+                width: 40%;
+            }
+
+            100% {
+                width: 100%
+            }
+        }
+
+        @media screen and (max-width:450px) {
+            .line {
+                margin-top: 0rem;
+                margin-left: 0rem;
+            }
+        }
+
+        #W {
+            margin-top: 30px;
+            margin-left: 85px;
+        }
+
+        @media screen and (max-width:450px) {
+            #W {
+                margin-top: 22px;
+                margin-left: 20px;
+            }
+        }
+
+        #span {
+            letter-spacing: 2px;
+        }
+
+        @media screen and (max-width:450px) {
+            #span {
+                position: relative;
+                left: -48.5rem;
+                top: 4.5rem;
+                opacity: 0;
+                width: 1rem;
+            }
+        }
+
+        #ulid {
+            margin-top: -35px;
+            margin-left: 874px;
+            text-decoration: none;
+        }
+
+        @media screen and (max-width:450px) {
+            #ulid {
+                position: relative;
+                top: 3rem;
+                left: 0.7rem;
+                /* padding-bottom: -4rem; */
+            }
+        }
+
+        li {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: gray;
+            display: inline-block;
+            padding: 0px 10px;
+        }
+
+        li:hover {
+            text-decoration-line: underline;
+            text-decoration-color: hsl(240, 100%, 5%);
+            color: hsl(35, 77%, 62%);
+            cursor: pointer;
+        }
+
+        @media screen and (max-width:450px) {
+            li {
+                margin-top: 40px;
+            }
+        }
+
+        #under {
+            height: 2px;
+            background-color: black;
+            margin-top: -1.5rem;
+        }
+
+        @media screen and (max-width:450px) {
+            #under {
+                margin-top: -12.3rem;
+            }
+        }
+
+        .anchor {
+            opacity: 2;
+        }
+
+        .anchor :hover {
+            text-decoration-line: underline;
+            text-decoration-color: hsl(240, 100%, 5%);
+            color: hsl(35, 77%, 62%);
+            cursor: pointer;
+        }
+
+        #ham {
+            opacity: 0;
+        }
+
+        @media screen and (max-width:450px) {
+            #ham {
+                position: relative;
+                left: 19rem;
+                top: -13.3rem;
+                opacity: 2;
+                height: 25px;
+                width: 35px;
+                cursor: pointer;
+                /* background-color: red; */
+            }
+        }
+
+        #hamclose {
+            opacity: 0;
+        }
+
+        @media screen and (max-width:450px) {
+            #hamclose {
+                opacity: 0;
+                position: absolute;
+                left: 19.5rem;
+                top: 6.8rem;
+                cursor: pointer;
+                height: 25px;
+                width: 35px;
+            }
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .about-us {
+            margin-top: 40px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .about-us {
+            margin-top: 40px;
+        }
+
+        footer {
+            background-color: #f0f0f0;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+            top: 3rem;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .contact-us {
+            text-align: left;
+        }
+
+        .contact-us h3 {
+            margin-bottom: 10px;
+        }
+
+        .contact-us p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="line"></div>
+        <a href="home.html"><img id="W" src="logo.svg" alt=""></a>
+        <nav id="span">
+            <ul id="ulid">
+                <a class="anchor" href="home.html"
+                    style="color: gray; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+                    <li>Home</li>
+                </a>
+                <a class="anchor" href="news.html"
+                    style="color: gray; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+                    <li>News</li>
+                </a>
+                <li>About us</li>
+            </ul>
+        </nav>
+        <img id="ham" src="icon-menu.svg" alt="">
+        <img id="hamclose" src="icon-menu-close.svg" alt="">
+        <ul id="under"></ul>
+    </div>
+
+    <main>
+        <section class="about-us">
+            <div class="container" id="container">
+                <h1>About Us</h1>
+                <p>Welcome to our News Web App! We are dedicated to delivering the latest and most accurate news from
+                    around the world. Our team of passionate journalists and editors work tirelessly to bring you the
+                    most relevant and engaging stories.</p>
+                <p>With a focus on objectivity and integrity, we aim to keep our readers informed and enlightened. Our
+                    platform covers a wide range of topics, including technology, entertainment, sports, and
+                    much more.</p>
+                <p>Feel free to explore our website and discover the latest happenings. We value your feedback and
+                    suggestions, so please don't hesitate to contact us.</p>
+                <p>Thank you for being a part of our news community!</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="contact-us">
+                    <h3>Contact Us</h3>
+                    <p>Email: contact@newswebapp.com</p>
+                    <p>Phone: +1 (123) 456-7890</p>
+                    <!-- Add more contact information if needed -->
+                </div>
+                <div class="copyright">
+                    <p>&copy; 2023 News Web App. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const ham = document.getElementById('ham');
+        const hamclose = document.getElementById('hamclose');
+
+        function clicker() {
+            console.log("working")
+            document.getElementById('container').style.marginTop = '20rem';
+            document.getElementById('span').style.opacity = '2';
+            document.getElementById('ham').style.opacity = '0';
+            document.getElementById('hamclose').style.opacity = '2';
+        }
+        ham.addEventListener("click", () => {
+            clicker();
+        })
+        function close() {
+            document.getElementById('container').style.marginTop = '0rem';
+            document.getElementById('span').style.opacity = '0';
+            document.getElementById('ham').style.opacity = '2';
+            document.getElementById('hamclose').style.opacity = '0';
+        }
+        hamclose.addEventListener("click", () => {
+            close();
+        })
+    </script>
+</body>
+
+</html>
