@@ -7,7 +7,7 @@ apiurl = 'https://newsapi.org/v2/everything?q=';
 option = {
     method: 'GET',
     headers: {
-        'X-Api-Key': apikey,
+        'x-Api-Key': apikey,
     },
 }
 
