@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEWS UPDATE</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="news.css">
+</head>
+
+<body>
+    <div class="line"></div>
+    <div id="headers">
+        <a href="home.html"><img id="W" src="logo.svg" alt=""></a>
+        <nav id="span">
+            <ul id="undl">
+                <a href="home.html"
+                    style="color: gray; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+                    <li class="li">Home</li>
+                </a>
+                <li class="li">News</li>
+                <a href="aboutus.html"
+                    style="color: gray; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+                    <li class="li">About us</li>
+                </a>
+            </ul>
+        </nav>
+        <ul id="under"></ul>
+        <img id="ham" src="icon-menu.svg" alt="">
+        <img id="hamclose" src="icon-menu-close.svg" alt="">
+            <input id="input" type="text" placeholder="Search">
+            <button class="btn btn-danger" id="btn2"><img src="arrow.png" alt="" height="31rem" width="30rem"></button>
+    </div>
+    <div id="info">
+        <div class="card" id="content" style="border: none;">
+            <div class="loadingio-spinner-magnify-s5kgplyjajk" id="gif">
+                <div class="ldio-2gclyan3ds3">
+                    <div>
+                        <div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body" id="cardbody">
+                <h5 class="card-title"></h5>
+                <p class="Author"> </p>
+                <p class="source"></p>
+                <p class="card-text"></p>
+                <a href="#" class="btn btn-danger" id="link" style="background-color: white; border: none;"></a>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    const ham = document.getElementById('ham');
+    const hamclose = document.getElementById('hamclose');
+
+    function clicker() {
+        console.log("working")
+        // document.getElementById('ulid').style.backgroundColor = 'white';
+        document.getElementById('input').style.top = '15.5rem';
+        document.getElementById('btn2').style.top = '15.5rem';
+        document.getElementById('info').style.marginTop = '13rem';
+        document.getElementById('span').style.opacity = '2';
+        document.getElementById('ham').style.opacity = '0';
+        document.getElementById('hamclose').style.opacity = '2';
+    }
+    ham.addEventListener("click", () => {
+        clicker();
+    })
+    function close() {
+        // document.getElementById('menu').style.opacity = '2';
+        document.getElementById('input').style.top = '0rem';
+        document.getElementById('btn2').style.top = '0rem';
+        document.getElementById('info').style.marginTop = '0rem';
+        document.getElementById('span').style.opacity = '0';
+        document.getElementById('ham').style.opacity = '2';
+        document.getElementById('hamclose').style.opacity = '0';
+    }
+    hamclose.addEventListener("click", () => {
+        close();
+    })
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+<script src="news.js"></script>
+<script src="news1.js"></script>
+
+</html>
