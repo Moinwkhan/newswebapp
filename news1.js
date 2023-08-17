@@ -1,18 +1,10 @@
 q = document.getElementById('input');
 apibtn = document.getElementById('btn2');
 
-const apikey = 'd549b82a4ba64aa2b5baa3d91c128a0c';
-const apiurl = 'https://newsapi.org/v2/everything?q=';
-
-const option = {
-    method: 'GET',
-    headers: {
-        'x-Api-Key': apikey,
-    },
-}
+const apiurl = 'https://newsapi.org/v2/everything?q=news&from=2023-07-17&sortBy=publishedAt&apiKey=d549b82a4ba64aa2b5baa3d91c128a0c';
 
 async function getnews(q) {
-    const response = await fetch(apiurl + q, option);
+    const response = await fetch(apiurl);
     var data = await response.json();
     console.log(data);
 
