@@ -9,7 +9,7 @@ async function getnews(q) {
     console.log(data);
 
     let str = "";
-    for (let item of data.articles) {
+    for (let item of data.results) {
         str = str + `<div id="info">
     <div class="card" style="width: 19rem; margin-bottom: 5rem;">
     <img src="${item.urlToImage}" class="card-img-top" alt="" style="border: none;">
