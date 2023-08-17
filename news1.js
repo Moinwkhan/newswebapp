@@ -1,7 +1,7 @@
 q = document.getElementById('input');
 apibtn = document.getElementById('btn2');
 
-const apiurl = 'https://newsapi.org/v2/everything?q=news&from=2023-07-17&sortBy=publishedAt&apiKey=d549b82a4ba64aa2b5baa3d91c128a0c';
+const apiurl = 'https://newsdata.io/api/1/news?apikey=pub_2779380d3ac4b915f859846d02d5b5f16a16a&q=sports&country=in&language=en&category=top,world';
 
 async function getnews(q) {
     const response = await fetch(apiurl);
