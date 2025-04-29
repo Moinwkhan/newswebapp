@@ -1,95 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NEWS UPDATE</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    
-    <link rel="stylesheet" href="news.css">
-</head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="news.css" />
+  </head>
 
-<body>
+  <body>
     <div class="line"></div>
     <div id="headers">
-        <a href="index.html"><img id="W" src="logo.svg" alt=""></a>
-        <nav id="span">
-            <ul id="undl">
-                <a href="index.html"
-                    style="color: gray; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
-                    <li class="li">Home</li>
-                </a>
-                <li class="li">News</li>
-                <a href="aboutus.html"
-                    style="color: gray; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
-                    <li class="li">About us</li>
-                </a>
-            </ul>
-        </nav>
-        <ul id="under"></ul>
-        <img id="ham" src="icon-menu.svg" alt="">
-        <img id="hamclose" src="icon-menu-close.svg" alt="">
-            <input id="input" type="text" placeholder="Search">
-            <button class="btn btn-danger" id="btn2"><img src="arrow.png" alt="" height="31rem" width="30rem"></button>
+      <a href="index.html"><img id="W" src="logo.svg" alt="" /></a>
+      <nav id="span">
+        <ul id="undl">
+          <a
+            href="index.html"
+            style="color: gray; font-family: 'Trebuchet MS', sans-serif"
+          >
+            <li class="li">Home</li>
+          </a>
+          <li class="li">News</li>
+          <a
+            href="aboutus.html"
+            style="color: gray; font-family: 'Trebuchet MS', sans-serif"
+          >
+            <li class="li">About us</li>
+          </a>
+        </ul>
+      </nav>
+      <ul id="under"></ul>
+      <img id="ham" src="icon-menu.svg" alt="" />
+      <img id="hamclose" src="icon-menu-close.svg" alt="" />
+      <input id="input" type="text" placeholder="Search" />
+      <button class="btn btn-danger" id="btn2">
+        <img src="arrow.png" alt="" height="31rem" width="30rem" />
+      </button>
     </div>
-    <div id="info">
-        <div class="card" id="content" style="border: none;">
-            <div class="loadingio-spinner-magnify-s5kgplyjajk" id="gif">
-                <div class="ldio-2gclyan3ds3">
-                    <div>
-                        <div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card-body" id="cardbody">
-                <h5 class="card-title"></h5>
-                <p class="Author"> </p>
-                <p class="source"></p>
-                <p class="card-text"></p>
-                <a href="#" class="btn btn-danger" id="link" style="background-color: white; border: none;"></a>
-            </div>
-        </div>
+
+    <div class="container my-4" id="info">
+      <div class="row" id="news-container"></div>
     </div>
-</body>
 
-<script>
-    const ham = document.getElementById('ham');
-    const hamclose = document.getElementById('hamclose');
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const newsContainer = document.getElementById("news-container");
 
-    function clicker() {
-        console.log("working")
-        // document.getElementById('ulid').style.backgroundColor = 'white';
-        document.getElementById('input').style.top = '15.5rem';
-        document.getElementById('btn2').style.top = '15.5rem';
-        document.getElementById('info').style.marginTop = '13rem';
-        document.getElementById('span').style.opacity = '2';
-        document.getElementById('ham').style.opacity = '0';
-        document.getElementById('hamclose').style.opacity = '2';
-    }
-    ham.addEventListener("click", () => {
-        clicker();
-    })
-    function close() {
-        // document.getElementById('menu').style.opacity = '2';
-        document.getElementById('input').style.top = '0rem';
-        document.getElementById('btn2').style.top = '0rem';
-        document.getElementById('info').style.marginTop = '0rem';
-        document.getElementById('span').style.opacity = '0';
-        document.getElementById('ham').style.opacity = '2';
-        document.getElementById('hamclose').style.opacity = '0';
-    }
-    hamclose.addEventListener("click", () => {
-        close();
-    })
-</script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-    crossorigin="anonymous"></script>
-<script src="news1.js"></script>
+        // Sample News Data (replace this with your API call)
+        const newsData = [
+          {
+            title:
+              "Pahalgam attack LIVE: 48 tourist sites in Kashmir shut amid security concerns",
+            author: "Rakesh",
+            source: "The Hindu Bureau",
+            description:
+              "Pakistan Defence Minister’s open confession exposes country as ‘rogue state’ fuelling global terrorism, says India at U.N.",
+            url: "https://www.thehindu.com/news/national/pahalgam-terror-attack-jammu-and-kashmir-loc-tensions-live-updates-april-29-2025/article69503715.ece",
+          },
+          {
+            title:
+              "Canada Election Results LIVE: After Liberals' Victory, Mark Carney Says Canada Should 'Never Forget' US Betrayal",
+            author: "Sanstuti Nath",
+            source: "NDTV World",
+            description:
+              "Canada Election Results Today LIVE: The public broadcaster CBC and CTV News both projected the Liberals would form Canada's next government, but it was not yet clear if they would hold a majority in parliament.",
+            url: "https://www.ndtv.com/world-news/canada-election-results-2025-live-updates-next-canadian-pm-liberal-party-mark-carney-conservatives-pierre-poilievre-federal-polls-vote-tracker-justin-8283009",
+          },
+          {
+            title:
+              "Asaduddin Owaisi's reminder to Bilawal Bhutto after ‘blood in river’ remark: ‘Whose mother….’",
+            author: "Shivam Pratap Singh",
+            source: "hindustantimes",
+            description:
+              "AIMIM chief Asaduddin Owaisi on Monday slammed Pakistani politician Bilawal Bhutto-Zardari for his 'blood would flow in rivers' remark after the suspension of the Indus Waters Treaty.",
+            url: "https://www.hindustantimes.com/india-news/asaduddin-owaisi-reminder-bilawal-bhutto-blood-in-river-mother-benazir-bhutto-pahalgam-101745860070441.html",
+          },
+          {
+            title:
+              "European shares edge higher as earnings roll in, tariff watch continues",
+            author: "Sukriti Gupta",
+            source: "Reuters",
+            description:
+              "European shares nudged higher on Tuesday as investors assessed a spate of corporate earnings, monitored potential tariff moves and awaited key economic data.",
+            url: "https://www.reuters.com/markets/europe/european-shares-edge-higher-earnings-roll-tariff-watch-continues-2025-04-29/",
+          },
+          {
+            title:
+              "South Korea says DeepSeek transferred user data to China and the U.S. without consent",
+            author: "Dylan Butts",
+            source: "European Markets",
+            description:
+              "South Korea’s data protection authority has concluded that Chinese artificial intelligence startup DeepSeek collected personal information from local users and transferred it overseas without their permission.",
+            url: "https://www.cnbc.com/2025/04/24/south-korea-says-deepseek-transferred-user-data-to-china-us-without-consent.html",
+          },
+          {
+            title:
+              "Sensex & Nifty are healing. But will this revive the Rs 2 lakh crore IPO pipeline lying in dumps",
+            author: "Akash Podishetti",
+            source: "The Economic Times",
+            description:
+              "South Korea’s data protection authority has concluded that Chinese artificial intelligence startup DeepSeek collected personal information from local users and transferred it overseas without their permission.",
+            url: "https://dig.watch/updates/openai-to-tweak-gpt-4o-after-user-concerns",
+          },
+          {
+            title: "OpenAI to tweak GPT-4o after user concerns",
+            source: "Digwatch",
+            description:
+              "OpenAI CEO Sam Altman announced that the company would work on reversing recent changes made to its GPT-4o model after users complained about the chatbot’s overly appeasing behaviour.",
+            url: "https://www.cnbc.com/2025/04/24/south-korea-says-deepseek-transferred-user-data-to-china-us-without-consent.html",
+          },
+        ];
 
+        newsData.forEach((news) => {
+          const col = document.createElement("div");
+          col.className = "col-12 col-sm-6 col-md-4 mb-4"; 
+
+          const cardHTML = `
+                  <div class="card h-100 shadow">
+                      <div class="card-body">
+                          <h5 class="card-title">${news.title}</h5>
+                          <p class="card-text">${news.description}</p>
+                          <p class="text-muted mb-1"><strong>Author:</strong> ${
+                            news.author || "Unknown"
+                          }</p>
+                          <p class="text-muted"><strong>Source:</strong> ${
+                            news.source
+                          }</p>
+                          <a href="${
+                            news.url
+                          }" target="_blank" class="btn btn-primary mt-2">Read More</a>
+                      </div>
+                  </div>
+              `;
+
+          col.innerHTML = cardHTML;
+          newsContainer.appendChild(col);
+        });
+      });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="news1.js"></script> -->
+  </body>
 </html>
