@@ -4,7 +4,6 @@
 }
 
 .line {
-    /* margin-top: .0rem; */
     background-color: red;
     height: 2px;
     animation: uline 1.5s ease-in-out .1s 1;
@@ -136,6 +135,10 @@
     top: -4.9rem;
 }
 
+.news-container{
+    padding: 20px;
+}
+
 @media screen and (max-width:450px) {
     #btn2 {
         left: 13.3rem;
@@ -181,11 +184,6 @@
     }
 }
 
-.card-body {
-    width: 320px;
-    /* margin-top: -2rem; */
-}
-
 #info {
     display: inline-flex;
     padding-left: 0rem;
@@ -205,12 +203,12 @@
     margin-top: 1rem;
 }
 
-.card {
+/* .card {
     display: table;
     margin-left: -1.2rem;
     margin-top: 2.5rem;
     width: 72.2rem;
-}
+} */
 
 @media screen and (max-width:450px) {
     .card {
